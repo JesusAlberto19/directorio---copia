@@ -22,7 +22,7 @@ try {
     if ($_FILES['foto']['error'] == UPLOAD_ERR_OK) {
         $foto_temp = $_FILES['foto']['tmp_name'];
         $foto_nombre = $_FILES['foto']['name'];
-        $foto_ruta = "imgs/$foto_nombre";
+        $foto_ruta = "../imgs/$foto_nombre";
 
         // Elimina la foto anterior si existe
         $sql_eliminar_foto = "SELECT foto FROM grupos WHERE id = :grupo_id";

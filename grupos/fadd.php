@@ -12,7 +12,7 @@ try {
     if ($_FILES['foto']['error'] == UPLOAD_ERR_OK) {
         $foto_temp = $_FILES['foto']['tmp_name'];
         $foto_nombre = $_FILES['foto']['name'];
-        $foto_ruta = "imgs/$foto_nombre";
+        $foto_ruta = "../imgs/$foto_nombre";
         move_uploaded_file($foto_temp, $foto_ruta);
     } else {
         $foto_ruta = null;
